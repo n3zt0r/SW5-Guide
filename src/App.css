@@ -1,0 +1,257 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --enemy-color: rgb(238, 122, 77);
+  --hostile-color: rgb(253, 228, 130);
+  --ally-color: rgb(93, 170, 240);
+  --place-style: rgb(211, 151, 210);
+
+  font: 18px/145% system-ui, 'Segoe UI', Roboto, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #8B6F47;
+  text-align: center;
+  color: #3E2723;
+}
+
+/******************************************** Main section ********************************************/
+.main {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo-img {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.main-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/****************************************** Paths section ******************************************/
+.path-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.path-title {
+  width: 100%;
+  padding: 30px;
+  font-size: 2em;
+  margin: 40px 0 20px 0;
+  color: #ffffff;
+  background: linear-gradient(90deg, transparent 0%, #000000 15%, #000000 85%, transparent 100%);
+  margin-bottom: 0;
+}
+
+.nobunagas-path {
+  margin-top: 0;
+  padding: 8px;
+  background: linear-gradient(90deg, transparent 0%, rgb(217, 48, 11) 15%, rgb(74, 21, 7) 50%, rgb(217, 48, 11) 85%, transparent 100%);
+}
+
+.mitsuhides-path {
+  margin-top: 0;
+  padding: 8px;
+  background: linear-gradient(90deg, transparent 0%, rgb(130, 118, 223) 15%, rgb(75, 38, 204) 50%, rgb(130, 118, 223) 85%, transparent 100%);
+}
+
+/****************************************** Chapters section ******************************************/
+.chapters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chapters-title {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+/****************************************** Stage section ******************************************/
+.stage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.stage-number {
+  font-size: 1.7em;
+}
+
+.stage-image {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.stage-title {
+  font-size: 1.5em;
+  margin: 5px;
+  padding: 20px;
+  color: #ffffff;
+  background: linear-gradient(90deg, transparent 0%, #000000 15%, #000000 85%, transparent 100%);
+}
+
+/*************************************** Objective list section ***************************************/
+.objectives-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.objectives-number {
+  color: #000000;
+  text-align: left;
+  padding-left: 40px;
+  font-size: 1.2em;
+  margin: 5px auto;
+}
+
+.objectives-list {
+  list-style-type: none;
+  padding: 0 40px;
+  background: linear-gradient(90deg, transparent 01%, #00000095 05%, #00000095 95%, transparent 99%);
+  border-block: 5px double #000000;
+  text-align: left;
+  
+  :first-child {
+    border-top: none;
+  }
+}
+
+/****************************************** Objective section ******************************************/
+.objective-container {
+  width: 100%;
+  padding: 30px;
+  border-top: 3px solid #000000;
+  color: #ffffff;
+  font-size: 1em;
+  cursor: pointer;
+  display: flex;
+}
+
+.objective-header {
+  width: 100%;
+  display: inline-block;
+}
+
+.objective-title {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  }
+
+.objective-description {
+  font-size: 0.9em;
+  text-align: justify;
+  color: #cccccc;
+  margin: 0;
+
+    span>.enemy-style {
+      color: var(--enemy-color);
+    }
+
+    span>.ally-style {
+      color: var(--ally-color);
+    }
+
+    span>.place-style {
+      color: var(--place-style);
+    }
+
+    span>.hostile-style {
+      color: var(--hostile-color);
+    }
+}
+
+.objective-tips {
+  font-size: 0.8em;
+  color: #999999;
+}
+
+.objective-checked {
+  background: linear-gradient(90deg, transparent 0%, #444444 10%, #444444 90%, transparent 100%);
+  color: #999999;
+  text-decoration: line-through;
+
+  p, p span {
+    color: #999999;
+  }
+}
+
+.objective-type {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.objective-type-checked {
+      background: #999999;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+.objective-bonus::after {
+  content: "Bonus";
+
+  background: linear-gradient(180deg, #a04600 0%, #c8c800 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.objective-special::after {
+  content: "Special";
+
+  background: linear-gradient(180deg, #65788f 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.objective-only {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.objective-only-checked {
+  filter: grayscale(100%) blur(2px);
+}
+
+.objective-image-only {
+  width: 100px;
+  height: 100px;
+  @media screen and (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+  }
+}
