@@ -1,7 +1,8 @@
 import image from 'assets/stages/mitsuhide_chapter1_stage1.webp';
 
 export const mitsuhide_chapter1_stage1 = {
-    id: "mitsuhide_chapter1_stage1",
+    get id() {return `${this.stageNumber}: ${this.stageName}`},
+    
     stageNumber: "Stage 1",
     stageName: "Defense of Mino",
     stageImage: image,

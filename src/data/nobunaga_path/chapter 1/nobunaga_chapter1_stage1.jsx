@@ -1,7 +1,8 @@
 import image from 'assets/stages/nobunaga_chapter1_stage1.webp';
 
 export const nobunaga_chapter1_stage1 = {
-    id: "nobunaga_chapter1_stage1",
+    get id() {return `${this.stageNumber}: ${this.stageName}`},
+    
     stageNumber: "Stage 1",
     stageName: "Raid on the Imagawa",
     stageImage: image,

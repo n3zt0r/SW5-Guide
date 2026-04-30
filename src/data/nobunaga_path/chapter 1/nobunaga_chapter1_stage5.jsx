@@ -1,7 +1,8 @@
 import image from 'assets/stages/nobunaga_chapter1_stage5.webp';
 
 export const nobunaga_chapter1_stage5 = {
-    id: "nobunaga_chapter1_stage5",
+    get id() {return `${this.stageNumber}: ${this.stageName}`},
+    
     stageNumber: "Stage 5",
     stageName: "Battle of Nagara River",
     stageImage: image,

@@ -1,5 +1,6 @@
 export const mitsuhide_chapter1_stage3 = {
-    id: "mitsuhide_chapter1_stage3",
+    get id() {return `${this.stageNumber}: ${this.stageName}`},
+    
     stageNumber: "Stage 3",
     stageName: "Battle of Nagara River",
     stageImage: "assets/stages/mitsuhide_chapter1_stage3.webp",

@@ -8,7 +8,7 @@ export default function Stage({ stage }) {
     const handleChecked = () => {
         setisChecked(!isChecked)
     }
- 
+
     return (
         <div className="stage-container">
             <div className={`stage-header ${isChecked && "stage-cheked"}`} onClick={handleChecked}>

@@ -1,7 +1,8 @@
 import image from 'assets/stages/nobunaga_chapter1_stage4.webp';
 
 export const nobunaga_chapter1_stage4 = {
-    id: "nobunaga_chapter1_stage4",
+    get id() {return `${this.stageNumber}: ${this.stageName}`},
+    
     stageNumber: "Stage 4",
     stageName: "Battle of Muraki Garrison",
     stageImage: image,

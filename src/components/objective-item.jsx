@@ -21,7 +21,7 @@ export default function ObjectiveItem({ index, objective }) {
 
                     {objective.type && (
                         <span
-                            className={`objective-type objective-${objective.type} ${isChecked && "objective-type-checked"}}`}
+                            className={`objective-type objective-${objective.type}`}
                         ></span>
                     )}
                 </div>
@@ -34,7 +34,7 @@ export default function ObjectiveItem({ index, objective }) {
 
             {/* Only section for specific characters */}
             {objective.only && (
-                <div className={`objective-only ${isChecked && "objective-only-checked"}`}>
+                <div className={`objective-only`}>
                     <img
                         src={`../src/assets/characters/${objective.only}.webp`}
                         alt={objective.only}
