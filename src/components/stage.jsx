@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import ObjectiveList from './objective-list';
+import { cleanText } from "helpers/cleanText"
 
 export default function Stage({ stage }) {
-    const { stageNumber, stageName, stageImage } = stage;
+    const { id, stageNumber, stageName, stageImage } = stage;
     const [isChecked, setisChecked] = useState(false)
+    const stageRef = cleanText(id)
 
     const handleChecked = () => {
         setisChecked(!isChecked)
     }
 
     return (
-        <div className="stage-container">
+        <div className="stage-container" id={stageRef}>
             <div className={`stage-header ${isChecked && "stage-cheked"}`} onClick={handleChecked}>
                 <h4 className='stage-number'>{stageNumber}</h4>
                 <img src={stageImage} alt={stageName} className="stage-image" />

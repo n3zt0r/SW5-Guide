@@ -1,9 +1,10 @@
 import React from "react";
 import Chapters from "components/chapters";
+import { cleanText } from "helpers/cleanText"
 
 export default function Path({ path }) {
     const { pathName, chapters } = path;
-    const pathClassName = pathName.toLowerCase().replace(/\s+/g, "-").replace(/'/g, "");
+    const pathClassName = cleanText(pathName);
 
     return (
         <div className="path-container">
@@ -11,7 +12,7 @@ export default function Path({ path }) {
             <div className={`path-title ${pathClassName}`}></div>
 
             {chapters.map((chapter, key) => (
-                <Chapters key={key} chapter={chapter} />
+                <Chapters key={key} pathId={pathClassName} chapter={chapter} />
             ))}
         </div>
     );

@@ -1,30 +1,27 @@
-const Menu = ({ stagesData }) => {
-    const menu_data = stagesData.flatMap((stage) => [
-            {id: stage.id.toLowerCase().replace(/'/g, "").replace(/ /g, "_"),
-             name: stage.id
-            },
-            ...stage.chapters.flatMap((chapter) => [
-                chapter.id,
-                ...chapter.stages.map((stage) => stage.id),
-            ]),
-        ]);
+import { menuDataCreater } from "helpers/menuDataCreater";
 
-        console.log(menu_data)
+export default function Menu({ stagesData }) {
+    const menu_data = menuDataCreater(stagesData);
+    console.log(menu_data);
+    
+
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (!element) return;
+        element.scrollIntoView({ behavior: "smooth", block: "start"  });
+    };
 
     return (
-        <div>
-            <nav className="menu-nav">
-                <ul>
-                    {menu_data.map(link => (
-                    <li>
-                        <a href={`#${link.id}`}>{link.name}</a>
-                    </li>
-
+        <div className="menu">
+            <nav>
+                <ul className="menu-list">
+                    {menu_data.map((link, key) => (
+                        <li key={key} href="javascript:void(0)" onClick={() => scrollToSection(link.id)}>
+                            {link.name}
+                        </li>
                     ))}
                 </ul>
             </nav>
         </div>
     );
-};
-
-export default Menu;
+}

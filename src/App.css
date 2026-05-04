@@ -39,8 +39,14 @@ body {
 }
 
 .menu {
-  width: 200px;
+  width: 250px;
+  background: var(--gray);
+  position: fixed;
   
+
+  .menu-list {
+    list-style: none;
+  }
 }
 
 /******************************************** Main section ********************************************/
