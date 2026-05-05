@@ -38,15 +38,30 @@ body {
   display: flex;
 }
 
-.menu {
-  width: 250px;
-  background: var(--gray);
-  position: fixed;
-  
+/******************************************** Menu section ********************************************/
 
-  .menu-list {
-    list-style: none;
-  }
+.menu {
+  min-width: 250px;
+  background: var(--gray);
+  /* position: fixed; */
+  display: flex;
+}
+
+.menu-list {
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-link {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.menu-link-active {
+  color: var(--ally-color);
 }
 
 /******************************************** Main section ********************************************/
@@ -87,13 +102,13 @@ body {
   margin-bottom: 0;
 }
 
-.nobunagas-path {
+.nobunagas_path {
   margin-top: 0;
   padding: 8px;
   background: linear-gradient(90deg, transparent 0%, rgb(217, 48, 11) 15%, rgb(74, 21, 7) 50%, rgb(217, 48, 11) 85%, transparent 100%);
 }
 
-.mitsuhides-path {
+.mitsuhides_path {
   margin-top: 0;
   padding: 8px;
   background: linear-gradient(90deg, transparent 0%, rgb(130, 118, 223) 15%, rgb(75, 38, 204) 50%, rgb(130, 118, 223) 85%, transparent 100%);
@@ -159,7 +174,7 @@ body {
   background: linear-gradient(90deg, transparent 01%, #00000095 05%, #00000095 95%, transparent 99%);
   border-block: 5px double #000000;
   text-align: left;
-  
+
   :first-child {
     border-top: none;
   }
@@ -185,7 +200,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  }
+}
 
 .objective-description {
   font-size: 0.9em;
@@ -193,21 +208,21 @@ body {
   color: var(--gray-lihgt);
   margin: 0;
 
-    span>.enemy-style {
-      color: var(--enemy-color);
-    }
+  span>.enemy-style {
+    color: var(--enemy-color);
+  }
 
-    span>.ally-style {
-      color: var(--ally-color);
-    }
+  span>.ally-style {
+    color: var(--ally-color);
+  }
 
-    span>.place-style {
-      color: var(--place-style);
-    }
+  span>.place-style {
+    color: var(--place-style);
+  }
 
-    span>.hostile-style {
-      color: var(--hostile-color);
-    }
+  span>.hostile-style {
+    color: var(--hostile-color);
+  }
 }
 
 .objective-tips {
@@ -218,12 +233,14 @@ body {
 .objective-checked {
   background: linear-gradient(90deg, transparent 0%, #444444 10%, #444444 90%, transparent 100%);
   color: var(--gray);
-  
-  p, span::after {
+
+  p,
+  span::after {
     text-decoration: line-through;
     color: var(--gray);
     filter: grayscale(100%);
   }
+
   .objective-only {
     filter: grayscale(100%) blur(2px);
   }
