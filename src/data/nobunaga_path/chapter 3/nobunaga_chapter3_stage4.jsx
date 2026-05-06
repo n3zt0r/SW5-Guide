@@ -2,7 +2,7 @@ export const nobunaga_chapter3_stage4 = {
     get id() {return `${this.stageNumber}: ${this.stageName}`},
     
     stageNumber: "Stage 4",
-    stageName: "Mayhem",
+    stageName: "Invastion of Suruga",
     stageImage: 'assets/stages/nobunaga_chapter3_stage4.webp',
     objectives: [
         { 
