@@ -8,7 +8,7 @@
   --enemy-color: rgb(238, 122, 77);
   --hostile-color: rgb(253, 228, 130);
   --ally-color: rgb(93, 170, 240);
-  --place-style: rgb(211, 151, 210);
+  --place-color: rgb(211, 151, 210);
 
   --orange: rgb(160, 70, 0);
   --yellow: rgb(200, 200, 0);
@@ -41,13 +41,13 @@ body {
 /******************************************** Menu section ********************************************/
 
 .menu {
-  min-width: 250px;
-  background: var(--gray);
-  /* position: fixed; */
+  width: 250px;
+  background: #00000099;
   display: flex;
 }
 
 .menu-list {
+  width: 250px;
   margin: 0;
   padding: 20px;
   list-style: none;
@@ -217,7 +217,7 @@ body {
   }
 
   span>.place-style {
-    color: var(--place-style);
+    color: var(--place-color);
   }
 
   span>.hostile-style {

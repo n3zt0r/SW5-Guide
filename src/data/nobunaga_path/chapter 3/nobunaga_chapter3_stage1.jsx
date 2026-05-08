@@ -19,7 +19,7 @@ export const nobunaga_chapter3_stage1 = {
         },
         { 
             name: "Take Out the Azai Officers",
-            description: <span>DefeDefeat Sadayuki Atsuji and Ujinao Imamuraat.</span>
+            description: <span>Defeat Sadayuki Atsuji and Ujinao Imamura.</span>
         },
         { 
             name: "Deer Hunter",
