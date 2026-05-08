@@ -13,6 +13,7 @@ export const nobunaga_chapter6_stage2 = {
         
         // Bonus Objectives
         { 
+            only: "",
             type: "bonus",
             name: "Attack", 
             description: <span>Prevent.</span>,
@@ -21,6 +22,7 @@ export const nobunaga_chapter6_stage2 = {
 
         // Special Objectives
         { 
+            only: "",
             type: "special",
             name: "Okazaki", 
             description: <span>Prevent.</span>,

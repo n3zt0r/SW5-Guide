@@ -44,6 +44,7 @@ body {
   width: 250px;
   background: #00000099;
   display: flex;
+  border-right: 1px solid var(--orange);
 }
 
 .menu-list {

@@ -13,6 +13,7 @@ export const mitsuhide_chapter4_stage2 = {
 
         // Bonus Objectives
         { 
+            only: "",
             type: "bonus",
             name: "Work", 
             description: <span>Work.</span>,
@@ -21,6 +22,7 @@ export const mitsuhide_chapter4_stage2 = {
 
         // Special Objectives
         { 
+            only: "",
             type: "special",
             name: "Prevent", 
             description: <span>Prevent.</span>,
