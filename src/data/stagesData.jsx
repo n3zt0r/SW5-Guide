@@ -71,6 +71,8 @@ import { mitsuhide_chapter6_stage1 } from "data/mitsuhide_path/chapter 6/mitsuhi
 import { mitsuhide_chapter6_stage2 } from "data/mitsuhide_path/chapter 6/mitsuhide_chapter6_stage2";
 import { mitsuhide_chapter6_stage3 } from "data/mitsuhide_path/chapter 6/mitsuhide_chapter6_stage3";
 
+import { reverie_stage1 } from "./reveire_path/reverie_stage1";
+
 export const stagesData = [
     {
         id: "Nobunaga's Path", // Nobunaga's Path
@@ -213,6 +215,19 @@ export const stagesData = [
                     { ...mitsuhide_chapter6_stage1 },
                     { ...mitsuhide_chapter6_stage2 },
                     { ...mitsuhide_chapter6_stage3 },
+                ],
+            },
+        ],
+    },
+    {
+        id: "Reverie Path", // Reverie Path
+        pathName: "Reverie Path",
+        chapters: [
+            {
+                id: "", // Chapter 1 of Reverie Chapter
+                chapterName: "",
+                stages: [
+                    { ...reverie_stage1 },
                 ],
             },
         ],

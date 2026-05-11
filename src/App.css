@@ -32,16 +32,20 @@ body {
   background: #8B6F47;
   text-align: center;
   color: #3E2723;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
+  height: 100vh;
 }
 
 /******************************************** Menu section ********************************************/
 
 .menu {
   width: 250px;
+  height: 100%;
+  overflow: hidden auto;
   background: #00000099;
   display: flex;
   border-right: 1px solid var(--orange);
@@ -50,7 +54,7 @@ body {
 .menu-list {
   width: 250px;
   margin: 0;
-  padding: 20px;
+  padding: 20px 30px 20px 20px;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -59,6 +63,7 @@ body {
 .menu-link {
   color: var(--white);
   text-decoration: none;
+  margin-block: 5px;
 }
 
 .menu-link-active {
@@ -71,6 +76,7 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 20px;
+  overflow: hidden auto;
 }
 
 .logo-img {
@@ -103,16 +109,21 @@ body {
   margin-bottom: 0;
 }
 
-.nobunagas_path {
+.path-banner {
   margin-top: 0;
   padding: 8px;
+}
+
+.nobunagas_path {
   background: linear-gradient(90deg, transparent 0%, rgb(217, 48, 11) 15%, rgb(74, 21, 7) 50%, rgb(217, 48, 11) 85%, transparent 100%);
 }
 
 .mitsuhides_path {
-  margin-top: 0;
-  padding: 8px;
   background: linear-gradient(90deg, transparent 0%, rgb(130, 118, 223) 15%, rgb(75, 38, 204) 50%, rgb(130, 118, 223) 85%, transparent 100%);
+}
+
+.reverie_path {
+  background: linear-gradient(90deg, transparent 0%, rgb(78, 205, 143) 15%, rgb(34, 103, 77) 50%, rgb(78, 205, 143) 85%, transparent 100%);
 }
 
 /****************************************** Chapters section ******************************************/
