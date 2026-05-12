@@ -15,7 +15,7 @@ export default function Chapters({ chapter, pathId }) {
         }
 
             {stages.map((stage, index) => (
-                <Stage key={index} stage={stage} />
+                <Stage key={index} stage={stage} pathId={pathId} />
             ))}
         </div>
     );

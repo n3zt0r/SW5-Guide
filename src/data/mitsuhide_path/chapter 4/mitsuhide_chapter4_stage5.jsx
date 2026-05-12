@@ -1,32 +1,93 @@
+// import image from 'assets/stages/mitsuhide_chapter4_stage5.webp';
+
 export const mitsuhide_chapter4_stage5 = {
     get id() {return `${this.stageNumber}: ${this.stageName}`},
     
     stageNumber: "Stage 5",
-    stageName: "Defense",
-    stageImage: 'assets/stages/mitsuhide_chapter4_stage5.webp',
+    stageName: "Battle of Odani Castle",
+    // stageImage: image,
     objectives: [
         { 
-            name: "Defeat", 
-            description: <span>Defeat.</span>,
-            tips: ""
+            name: "Blood-Stained Yamazakimaru", 
+            description: <span>Defeat the enemy troops to set fire to Yamazakimaru.</span>,
+            tips: ''
+        },
+        { 
+            name: "Capturing the Southern Garrison", 
+            description: <span>Defeat Kunishada Mitamura to capture the Southern Garrison.</span>,
+            tips: ''
+        },
+        { 
+            name: "Breaking Through the Southern Lines", 
+            description: <span>Defeat Ujitane An'yoji and Hidetoshi Onogi to clear a path.</span>,
+            tips: ''
+        },
+        { 
+            name: "Momochi's Plan", 
+            description: <span>Defeat Naoyori Nakajima and Naochika Nakajima while protecting the fireball captains.</span>,
+            tips: ''
+        },
+        { 
+            name: "He Who Stands in the Way", 
+            description: <span>Defeat Oichi and her allies to capture Ozuku Garrison.</span>,
+            tips: ''
+        },
+        { 
+            name: "The Guardians of Kingomaru", 
+            description: <span>Defeat Katsuiie Shibata and the shield soldiers to capture Kingomaru.</span>,
+            tips: ''
+        },
+        { 
+            name: "Nobunaga in Danger", 
+            description: <span>Defeat Kazumasa Isono and his allies before they approach Nobunaga Oda.</span>,
+            tips: 'This will trigger after 3 of the 4 targets in "He Who Stands in the Way" are defeated. Defeating 4/4 will trigger "Massacre at Kyogokumaru". If you leave Oichi undefeated, complete "Mitsuhide in Peril", then circle back to finish Oichi, it might make your life easier'
+        },
+        { 
+            name: "The Massacre at Kyogokumaru", 
+            description: <span>Defeat Tsunachika Kaiho and his allies to set fire to Kyogokumaru.</span>,
+            tips: ''
+        },
+        { 
+            name: "Breaking through the Guard Post", 
+            description: <span>Defeat the enemy troops at the guard post in order to mount a swift attack.</span>,
+            tips: ''
+        },
+        { 
+            name: "Unwavering Resolve", 
+            description: <span>Defeat Oichi and Katsuiie Shibata.</span>,
+            tips: ''
         },
 
         // Bonus Objectives
         { 
             only: "",
             type: "bonus",
-            name: "Work", 
-            description: <span>Work.</span>,
-            tips: ""
+            name: "Hidden in the Garrison", 
+            description: <span>Defeat the spy captains hiding in the garrison.</span>,
+            tips: 'After the first mission and fire scene, Nobunaga will mention a strange garrison. It\'s straight above 2P\'s starting position. Use 1P to get there and spy captains will show up to trigger this objective'
+        },
+        { 
+            only: "",
+            type: "bonus",
+            name: "Allied Reinforcements Arrive", 
+            description: <span>Defeat the enemy troops in the External Ward so the allied reinforcements can be brought in.</span>,
+            tips: 'Trigger by entering the southeastern garrison. Which is a little ways south of Katsuiie Shibata\'s starting position'
+        },
+        { 
+            only: "",
+            type: "bonus",
+            name: "Rendezvous with Nobunaga", 
+            description: <span>Defeat Katsumoto Katagiri and the spear captains to rendezvous with Nobunaga earlier than planned.</span>,
+            tips: 'After you do "Breaking Through the Guard Post", run to the area north of where "Mitsuki\'s Progress" was located. You should see Katagiri and his spear captains, which should trigger this objective. Alternatively, you could leave Oichi alive, finish "Nobunaga in Danger", then walk right up to Katagiri'
         },
 
         // Special Objectives
         { 
             only: "",
             type: "special",
-            name: "Prevent", 
-            description: <span>Prevent.</span>,
-            tips: ""
+            name: "Mitsuki's Progress", 
+            description: <span>Defeat Masamoto Azai and Kiyotsuna Akao while protecting the spy captains.</span>,
+            tips: 'During "Breaking Through the Southern Lines" and "Momochi\'s Plan", you\'ll get some dialogue from Mitsuki indicating a garrison she wants to take down. Her spy captains will show up nearby. Approach the garrison to trigger the objective'
         },
     ],
     

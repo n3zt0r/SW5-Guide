@@ -1,14 +1,16 @@
+// import image from 'assets/stages/mitsuhide_chapter5_stage4.webp';
+
 export const mitsuhide_chapter5_stage4 = {
     get id() {return `${this.stageNumber}: ${this.stageName}`},
     
     stageNumber: "Stage 4",
     stageName: "Defense",
-    stageImage: 'assets/stages/mitsuhide_chapter5_stage4.webp',
+    // stageImage: image,
     objectives: [
         { 
             name: "Defeat", 
             description: <span>Defeat.</span>,
-            tips: ""
+            tips: ''
         },
 
         // Bonus Objectives
@@ -17,7 +19,7 @@ export const mitsuhide_chapter5_stage4 = {
             type: "bonus",
             name: "Work", 
             description: <span>Work.</span>,
-            tips: ""
+            tips: ''
         },
 
         // Special Objectives
@@ -26,7 +28,7 @@ export const mitsuhide_chapter5_stage4 = {
             type: "special",
             name: "Prevent", 
             description: <span>Prevent.</span>,
-            tips: ""
+            tips: ''
         },
     ],
     
