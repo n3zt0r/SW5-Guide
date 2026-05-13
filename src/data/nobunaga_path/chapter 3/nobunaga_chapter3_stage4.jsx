@@ -70,9 +70,9 @@ export const nobunaga_chapter3_stage4 = {
         },
     ],
 
-    rareWeapon: {
+    rareWeapon: [{
         name: "Sun Goddess",
         description: <span>S Rank all with <span className="ally-style">Sena</span> on Hard or greater.</span>,
         tips: 'Other half is on Akechi 6-3, Battle of Yamazaki (Hashiba), with Hideyoshi Hashiba'
-    }
+    }]
 }

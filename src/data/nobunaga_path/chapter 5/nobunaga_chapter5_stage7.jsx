@@ -63,9 +63,9 @@ export const nobunaga_chapter5_stage7 = {
         },
     ],
 
-    rareWeapon: {
+    rareWeapon: [{
         name: "Heavenly Twin Blade",
         description: <span>S Rank all with <span className="ally-style">Ieyasu Tokugawa</span> on Hard or greater.</span>,
         tips: 'Other half is in Reverie 1-6, Final Battle of Kozuki Castle, with Shikanosuke Yamanaka'
-    }
+    }]
 }

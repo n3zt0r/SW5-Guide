@@ -97,9 +97,9 @@ export const nobunaga_chapter3_stage2 = {
         },
     ],
 
-    rareWeapon: {
+    rareWeapon: [{
         name: "Moon's Divine Providence",
         description: <span>S Rank all with <span className="ally-style">Oichi</span> on Hard or greater.</span>,
         tips: 'Other half is on Oda 6-4, Battle of Takamatsu Castle, using Kanbei Kuroda'
-    }
+    }]
 }

@@ -50,9 +50,9 @@ export const nobunaga_chapter2_stage5 = {
         },
     ],
 
-    rareWeapon: {
+    rareWeapon: [{
         name: "Sakura Princess",
         description: <span>S Rank all with <span className="ally-style">Hideyoshi Hashiba</span> on Hard or greater.</span>,
         tips: 'Other half is on Oda 5-6, Arioka Castle, with Hanbei Takenaka'
-    }
+    }]
 }

@@ -1,42 +1,46 @@
 // import image from 'assets/stages/mitsuhide_chapter6_stage1.webp';
 
 export const mitsuhide_chapter6_stage1 = {
-    get id() {return `${this.stageNumber}: ${this.stageName}`},
-    
+    get id() {
+        return `${this.stageNumber}: ${this.stageName}`;
+    },
+
     stageNumber: "Stage 1",
     stageName: "Defense",
     // stageImage: image,
     objectives: [
-        { 
-            name: "Defeat", 
+        {
+            name: "Defeat",
             description: <span>Defeat.</span>,
-            tips: ''
+            tips: ``,
         },
 
         // Bonus Objectives
-        { 
+        {
             only: "",
             type: "bonus",
-            name: "Work", 
+            name: "Work",
             description: <span>Work.</span>,
-            tips: ''
+            tips: ``,
         },
 
         // Special Objectives
-        { 
+        {
             only: "",
             type: "special",
-            name: "Prevent", 
+            name: "Prevent",
             description: <span>Prevent.</span>,
-            tips: ''
+            tips: ``,
         },
     ],
-    
+
     /*
-    rareWeapon: {
-        name: "Daikokuten",
-        description: <span>S Rank all with <span className="ally-style">Ieyasu Tokugawa</span> on Hard or greater.</span>,
-        tips: 'Other half is on Reverie 1-1, Annihilation at Okehazama, with Yoshimoto Imagawa'
-    }
+    rareWeapon: [
+        {
+            name: "Daikokuten",
+            description: <span>S Rank all with <span className="ally-style">Ieyasu Tokugawa</span> on Hard or greater.</span>,
+            tips: `Other half is on Reverie 1-1, Annihilation at Okehazama, with Yoshimoto Imagawa`
+        }
+    ],
     */
-}
+};

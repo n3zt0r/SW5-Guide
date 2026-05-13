@@ -83,9 +83,9 @@ export const nobunaga_chapter6_stage3 = {
         },
     ],
 
-    rareWeapon: {
+    rareWeapon: [{
         name: "The Great Serpent Slayer",
         description: <span>S Rank all with <span className="ally-style">Nobunaga Oda</span> on Hard or greater.</span>,
         tips: 'Other half is on Akechi 2-3, Joint Struggle with the Uesugi, using Kenshin Uesugi'
-    }
+    }]
 }

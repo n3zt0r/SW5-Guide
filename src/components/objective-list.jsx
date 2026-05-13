@@ -4,7 +4,7 @@ import RareWeapon from "./rare-weapon";
 export default function ObjectiveList({ stage }) {
     const { objectives, rareWeapon } = stage;
     const objectivesNumber = objectives.length;
-   
+
     return (
         <div className="objectives-container">
             <h6 className="objectives-number">
@@ -21,7 +21,10 @@ export default function ObjectiveList({ stage }) {
                 ))}
             </ul>
 
-            {rareWeapon && <RareWeapon rareWeapon={rareWeapon} />}
+            {rareWeapon &&
+                rareWeapon.map((weapon, index) => (
+                    <RareWeapon key={index} rareWeapon={weapon} />
+                ))}
         </div>
     );
 }

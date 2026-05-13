@@ -76,9 +76,9 @@ export const mitsuhide_chapter2_stage3 = {
         },
     ],
     
-    rareWeapon: {
+    rareWeapon: [{
         name: "The Great Serpent Slayer",
         description: <span>S Rank all with <span className="ally-style">Nobunaga Oda</span> on Hard or greater.</span>,
         tips: 'Other half is on Oda 6-3, Honnoji, using Nobunaga Oda'
-    }
+    }]
 }

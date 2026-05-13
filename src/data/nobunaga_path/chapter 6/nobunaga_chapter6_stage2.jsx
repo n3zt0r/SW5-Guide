@@ -78,9 +78,9 @@ export const nobunaga_chapter6_stage2 = {
         },
     ],
 
-    rareWeapon: {
+    rareWeapon: [{
         name: "Divine Thunder",
         description: <span>S Rank all with <span className="ally-style">Yasuke</span> on Hard or greater.</span>,
         tips: 'Other half is on Oda 3-2, Battle of Anegawa, with Mitsuki'
-    }
+    }]
 }

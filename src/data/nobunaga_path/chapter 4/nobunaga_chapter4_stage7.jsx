@@ -65,9 +65,9 @@ export const nobunaga_chapter4_stage7 = {
         },
     ],
 
-    rareWeapon: {
+    rareWeapon: [{
         name: "Gale Slicer",
         description: <span>S Rank all with <span className="ally-style">Tadakatsu Honda</span> on Hard or greater.</span>,
         tips: 'Other half is on Oda 6-5, Crossing of Iga, with Hanzo Hattori'
-    }
+    }]
 }

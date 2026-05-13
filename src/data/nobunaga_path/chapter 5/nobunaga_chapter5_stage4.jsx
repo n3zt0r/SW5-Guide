@@ -82,9 +82,9 @@ export const nobunaga_chapter5_stage4 = {
         },
     ],
 
-    rareWeapon: {
+    rareWeapon: [{
         name: "Demon's Revolt",
         description: <span>S Rank all with <span className="ally-style">Katsuie Shibata</span> on Hard or greater.</span>,
         tips: 'Other half is on Akechi 1-4, Battle of Akechi Castle, with Toshimitsu Saito'
-    }
+    }]
 }

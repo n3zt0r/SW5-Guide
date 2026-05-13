@@ -70,9 +70,9 @@ export const nobunaga_chapter5_stage5 = {
         },
     ],
 
-    rareWeapon: {
+    rareWeapon: [{
         name: "Sacred Flame Mortar",
         description: <span>S Rank all with <span className="ally-style">Kazuuji Nakamura</span> on Hard or greater.</span>,
         tips: 'Other half is on Reverie 1-2, Match in Eiroku, with Magoichi Saika'
-    }
+    }]
 }

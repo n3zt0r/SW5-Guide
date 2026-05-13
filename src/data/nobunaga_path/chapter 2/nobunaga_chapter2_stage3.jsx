@@ -52,9 +52,9 @@ export const nobunaga_chapter2_stage3 = {
         },
     ],
 
-    /* rareWeapon: {
+    /* rareWeapon: [{
         name: "Virtuous",
         description: <span>S Rank all with <span className="ally-style">Toshiie Maeda</span> on Hard or greater.</span>,
         tips: 'Other half is on Oda 4-8, Battle of Mikatagahara (Takeda), using Shingen Takeda'
-    } */
+    }] */
 }

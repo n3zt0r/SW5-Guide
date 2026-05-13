@@ -11,10 +11,10 @@ export default function RareWeapon({ rareWeapon }) {
     };
 
     return (
-        <div className="objectives-list">
-            <div className="objective-container">
+        <div className={`objectives-list`}>
+            <div className={`objective-container ${isChecked && "objective-checked"}`}>
                 <div
-                    className={`objective-header ${isChecked && "objective-checked"}`}
+                    className={`objective-header`}
                     onClick={handleChecked}
                 >
                     <p className="objective-name objective-title">

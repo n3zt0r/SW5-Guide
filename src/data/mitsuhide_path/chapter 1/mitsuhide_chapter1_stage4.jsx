@@ -67,9 +67,9 @@ export const mitsuhide_chapter1_stage4 = {
     ],
 
     // Rare Weapon
-    rareWeapon: {
+    rareWeapon: [{
         name: "Demon's Revolt",
         description: <span>S Rank all with <span className="ally-style">Toshimitsu Saito</span> on Hard or greater.</span>,
         tips: 'Other half is on Oda 5-4, Battle of Tetorigawa, with Katsuiie.'
-    }
+    }]
 }

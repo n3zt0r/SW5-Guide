@@ -77,9 +77,9 @@ export const nobunaga_chapter4_stage2 = {
         },
     ],
 
-    rareWeapon: {
+    rareWeapon: [{
         name: "Divine Power",
         description: <span>S Rank all with <span className="ally-style">Mtsuki</span> on Hard or greater.</span>,
         tips: 'Other half is on Oda 6-2, Conquest of Kai, with Yasuke'
-    }
+    }]
 }

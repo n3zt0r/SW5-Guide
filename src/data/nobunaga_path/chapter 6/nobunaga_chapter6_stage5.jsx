@@ -73,9 +73,9 @@ export const nobunaga_chapter6_stage5 = {
         },
     ],
 
-    rareWeapon: {
+    rareWeapon: [{
         name: "Gale Slicer",
         description: <span>S Rank all with <span className="ally-style">Hanzo Hattori</span> on Hard or greater.</span>,
         tips: 'Other half is on Oda 4-7, Battle of Mikatagahara, with Tadakatsu Honda'
-    }
+    }]
 }

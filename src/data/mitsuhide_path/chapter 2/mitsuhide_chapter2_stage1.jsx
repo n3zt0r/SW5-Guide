@@ -67,10 +67,10 @@ export const mitsuhide_chapter2_stage1 = {
     ],
     
     /*
-    rareWeapon: {
+    rareWeapon: [{
         name: "Daikokuten",
         description: <span>S Rank all with <span className="ally-style">Ieyasu Tokugawa</span> on Hard or greater.</span>,
         tips: 'Other half is on Reverie 1-1, Annihilation at Okehazama, with Yoshimoto Imagawa'
-    }
+    }]
     */
 }

@@ -124,7 +124,7 @@ export const nobunaga_chapter2_stage1 = {
             tips: "Just approach them at central area",
         },
     ],
-    rareWeapon: {
+    rareWeapon: [{
         name: "Virtuous Wrath",
         description: (
             <span>
@@ -134,5 +134,5 @@ export const nobunaga_chapter2_stage1 = {
             </span>
         ),
         tips: "Other half is on Oda 4-8, Battle of Mikatagahara (Takeda), using Shingen Takeda",
-    },
+    }],
 };

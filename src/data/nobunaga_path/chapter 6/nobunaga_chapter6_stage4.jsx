@@ -66,9 +66,9 @@ export const nobunaga_chapter6_stage4 = {
         },
     ],
 
-    rareWeapon: {
+    rareWeapon: [{
         name: "Moon's Divine Providence",
         description: <span>S Rank all with <span className="ally-style">Kanbei Kuroda</span> on Hard or greater.</span>,
         tips: 'Other half is at Oda 3-2, Battle of Kannonji Castle, using Oichi'
-    }
+    }]
 }

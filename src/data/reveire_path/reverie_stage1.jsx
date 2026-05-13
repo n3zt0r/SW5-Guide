@@ -10,7 +10,7 @@ export const reverie_stage1 = {
         { 
             name: "Defeat", 
             description: <span>Defeat.</span>,
-            tips: ''
+            tips: ``,
         },
 
         // Bonus Objectives
@@ -19,7 +19,7 @@ export const reverie_stage1 = {
             type: "bonus",
             name: "Work", 
             description: <span>Work.</span>,
-            tips: ''
+            tips: ``,
         },
 
         // Special Objectives
@@ -28,15 +28,15 @@ export const reverie_stage1 = {
             type: "special",
             name: "Prevent", 
             description: <span>Prevent.</span>,
-            tips: ''
+            tips: ``,
         },
     ],
     
     /*
-    rareWeapon: {
+    rareWeapon: [{
         name: "Daikokuten",
         description: <span>S Rank all with <span className="ally-style">Ieyasu Tokugawa</span> on Hard or greater.</span>,
-        tips: 'Other half is on Reverie 1-1, Annihilation at Okehazama, with Yoshimoto Imagawa'
-    }
+        tips: `Other half is on Reverie 1-1, Annihilation at Okehazama, with Yoshimoto Imagawa`
+    }]
     */
 }
