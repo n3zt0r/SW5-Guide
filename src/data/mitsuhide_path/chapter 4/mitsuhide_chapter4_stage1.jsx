@@ -19,7 +19,7 @@ export const mitsuhide_chapter4_stage1 = {
         },
         { 
             name: "A Sister's Decision", 
-            description: <span>Defeat Oichi and Katsuiie Shibata so that Nobunaga Oda and Noh can retreat.</span>,
+            description: <span>Defeat Oichi and Katsuie Shibata so that Nobunaga Oda and Noh can retreat.</span>,
             tips: ''
         },
         { 

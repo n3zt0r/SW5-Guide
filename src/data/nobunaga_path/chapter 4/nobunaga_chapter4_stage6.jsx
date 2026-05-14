@@ -32,7 +32,7 @@ export const nobunaga_chapter4_stage6 = {
         },
         { 
             name: "The Guardians of Kingomaru",
-            description: <span>Defeat Katsuiie Shibata and the shield soldiers to capture Kingomaru.</span>,
+            description: <span>Defeat Katsuie Shibata and the shield soldiers to capture Kingomaru.</span>,
             tips: ''
         },
         { 
@@ -47,7 +47,7 @@ export const nobunaga_chapter4_stage6 = {
         },
         { 
             name: "Unwavering Resolve",
-            description: <span>Defeat Oichi and Katsuiie Shibata.</span>,
+            description: <span>Defeat Oichi and Katsuie Shibata.</span>,
             tips: ''
         },
         
@@ -62,7 +62,7 @@ export const nobunaga_chapter4_stage6 = {
             type: "bonus",
             name: "Allied Reinforcements Arrive", 
             description: <span>Defeat the enemy troops in the External Ward so the allied reinforcements can be brought in.</span>,
-            tips: 'Trigger by entering the southeastern garrison. Which is a little ways south of Katsuiie Shibata\'s starting position'
+            tips: 'Trigger by entering the southeastern garrison. Which is a little ways south of Katsuie Shibata\'s starting position'
         },
         { 
             type: "bonus",

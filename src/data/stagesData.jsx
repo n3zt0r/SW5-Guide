@@ -71,7 +71,15 @@ import { mitsuhide_chapter6_stage1 } from "data/mitsuhide_path/chapter 6/mitsuhi
 import { mitsuhide_chapter6_stage2 } from "data/mitsuhide_path/chapter 6/mitsuhide_chapter6_stage2";
 import { mitsuhide_chapter6_stage3 } from "data/mitsuhide_path/chapter 6/mitsuhide_chapter6_stage3";
 
-import { reverie_stage1 } from "./reveire_path/reverie_stage1";
+import { reverie_stage1 } from "./reverie_path/reverie_stage1";
+import { reverie_stage2 } from "./reverie_path/reverie_stage2";
+import { reverie_stage3 } from "./reverie_path/reverie_stage3";
+import { reverie_stage4 } from "./reverie_path/reverie_stage4";
+import { reverie_stage5 } from "./reverie_path/reverie_stage5";
+import { reverie_stage6 } from "./reverie_path/reverie_stage6";
+import { reverie_stage7 } from "./reverie_path/reverie_stage7";
+import { reverie_stage8 } from "./reverie_path/reverie_stage8";
+import { reverie_stage9 } from "./reverie_path/reverie_stage9";
 
 export const stagesData = [
     {
@@ -167,7 +175,7 @@ export const stagesData = [
             {
                 id: "Chapter 2", // Chapter 2 of Mitsuhide's Path
                 chapterName: "Chapter 2",
-                stages: [
+            stages: [
                     { ...mitsuhide_chapter2_stage1 },
                     { ...mitsuhide_chapter2_stage2 },
                     { ...mitsuhide_chapter2_stage3 },
@@ -228,6 +236,14 @@ export const stagesData = [
                 chapterName: "",
                 stages: [
                     { ...reverie_stage1 },
+                    { ...reverie_stage2 },
+                    { ...reverie_stage3 },
+                    { ...reverie_stage4 },
+                    { ...reverie_stage5 },
+                    { ...reverie_stage6 },
+                    { ...reverie_stage7 },
+                    { ...reverie_stage8 },
+                    { ...reverie_stage9 },
                 ],
             },
         ],

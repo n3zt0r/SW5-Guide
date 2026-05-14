@@ -7,7 +7,7 @@ export const nobunaga_chapter4_stage2 = {
     objectives: [
         { 
             name: "Demon Shibata's Pride",
-            description: <span>Defeat Katsuiie Shibata and his allies.</span>,
+            description: <span>Defeat Katsuie Shibata and his allies.</span>,
             tips: ''
         },
         { 

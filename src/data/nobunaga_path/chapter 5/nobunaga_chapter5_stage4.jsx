@@ -63,7 +63,7 @@ export const nobunaga_chapter5_stage4 = {
             type: "bonus",
             name: "Beauty and the Gonruko", 
             description: <span>Hurry and defeat Shigenaga Honjo, Nagaatsu Shibata, and Takahiro Kitajo.</span>,
-            tips: 'Triggers when Katsuiie is playable. Same mission as "Onward" but with a 3 min time limit. Before completing this, have 2P approach Nagachika Kawada\'s team near Oichi. This will trigger the bonus objective "Ladies First"'
+            tips: 'Triggers when Katsuie is playable. Same mission as "Onward" but with a 3 min time limit. Before completing this, have 2P approach Nagachika Kawada\'s team near Oichi. This will trigger the bonus objective "Ladies First"'
         },
         { 
             only: "toshiie_maeda",

@@ -66,8 +66,8 @@ export const mitsuhide_chapter1_stage1 = {
         { 
             type: "special",
             name: "On Your Guard", 
-            description: <span>Prevent <span className='enemy-style'>Katsuiie Shibata</span> from infiltrating the <span className='place-style'>Saito Main Camp</span>.</span>,
-            tips: "When 'Nobunaga's Younger Brother' starts, Katsuiie will say he's moving out as well. Intercept him to trigger this objective."
+            description: <span>Prevent <span className='enemy-style'>Katsuie Shibata</span> from infiltrating the <span className='place-style'>Saito Main Camp</span>.</span>,
+            tips: "When 'Nobunaga's Younger Brother' starts, Katsuie will say he's moving out as well. Intercept him to trigger this objective."
         },
     ],
 }

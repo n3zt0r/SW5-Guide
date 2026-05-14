@@ -1,9 +1,9 @@
-// import image from 'assets/stages/reverie_stage1.webp';
+// import image from 'assets/stages/reverie_stage9.webp';
 
-export const reverie_stage1 = {
+export const reverie_stage9 = {
     get id() {return `${this.stageNumber}: ${this.stageName}`},
     
-    stageNumber: "Stage 1",
+    stageNumber: "Stage 9",
     stageName: "Defense",
     // stageImage: image,
     objectives: [

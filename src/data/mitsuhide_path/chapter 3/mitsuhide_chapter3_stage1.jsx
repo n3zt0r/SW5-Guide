@@ -66,8 +66,8 @@ export const mitsuhide_chapter3_stage1 = {
             only: "",
             type: "special",
             name: "The Devil Shibata Marches", 
-            description: <span>Defeat Katsuiie Shibata to prevent the cavalry's attack.</span>,
-            tips: 'Before completing the first mission, take the suspiciously empty path that goes off to the west. You should see Katsuiie come out of the gate as you get near'
+            description: <span>Defeat Katsuie Shibata to prevent the cavalry's attack.</span>,
+            tips: 'Before completing the first mission, take the suspiciously empty path that goes off to the west. You should see Katsuie come out of the gate as you get near'
         },
     ],
     

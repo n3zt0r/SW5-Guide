@@ -27,7 +27,7 @@ export const nobunaga_chapter4_stage1 = {
         },
         { 
             name: "A Parting of Siblings",
-            description: <span>Defeat Oichi and Katsuiie Shibata.</span>,
+            description: <span>Defeat Oichi and Katsuie Shibata.</span>,
             tips: ''
         },
         

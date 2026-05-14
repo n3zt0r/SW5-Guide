@@ -23,7 +23,7 @@ export const nobunaga_chapter2_stage4 = {
         },
         { 
             name: "Budding Romance",
-            description: <span>Work with Sena to defeat Katsuiie Shibata.</span>
+            description: <span>Work with Sena to defeat Katsuie Shibata.</span>
         },
         
         // Bonus Objectives
@@ -41,7 +41,7 @@ export const nobunaga_chapter2_stage4 = {
             only: "ieyasu_tokugawa",
             type: "bonus",
             name: "The Demon Shibata and the Mighty Men OF Mikawa", 
-            description: <span>Ieyasu Tokugawa must defeat Katsuiie Shibata with a Musou Attack.</span>
+            description: <span>Ieyasu Tokugawa must defeat Katsuie Shibata with a Musou Attack.</span>
         },
 
         // Special Objectives

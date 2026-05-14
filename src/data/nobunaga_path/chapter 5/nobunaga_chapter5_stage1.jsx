@@ -17,7 +17,7 @@ export const nobunaga_chapter5_stage1 = {
         },
         { 
             name: "To Save Face",
-            description: <span>Work with Katsuiie Shibata to defeat all the Takeda Cavalry Captains.</span>,
+            description: <span>Work with Katsuie Shibata to defeat all the Takeda Cavalry Captains.</span>,
             tips: 'Replaces "The Cavalry Moves Out"'
         },
         { 

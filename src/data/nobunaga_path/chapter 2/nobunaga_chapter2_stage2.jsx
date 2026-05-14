@@ -41,7 +41,7 @@ export const nobunaga_chapter2_stage2 = {
                 <span>
                     Defeat <span className="enemy-style">Sena</span> and her
                     allies to prevent{" "}
-                    <span className="ally-style">Katsuiie</span>,{" "}
+                    <span className="ally-style">Katsuie</span>,{" "}
                     <span className="ally-style">Hideyoshi</span>, and{" "}
                     <span className="ally-style">Oichi</span> from being taken
                     out.
