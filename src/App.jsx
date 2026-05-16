@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import SW5_logo from "assets/SW5_logo.png";
 import Menu from "./components/menu";
@@ -7,6 +7,14 @@ import Path from "components/path";
 import { stagesData } from "data/stagesData";
 
 export default function App() {
+    useState(() => {
+        const saved = localStorage.getItem("SW5");
+        console.log(saved);
+        /////////////////////////////////////////////////////
+        return saved ? JSON.parse(saved) : {};
+        
+    });
+
     return (
         <div className="container">
             <Menu className="lateral-menu" stagesData={stagesData}/>

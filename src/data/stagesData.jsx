@@ -83,12 +83,12 @@ import { reverie_stage9 } from "./reverie_path/reverie_stage9";
 
 export const stagesData = [
     {
-        id: "Nobunaga's Path", // Nobunaga's Path
-        pathName: "Nobunaga's Path",
+        id: "nobunagas_path", // Nobunaga's Path
+        name: "Nobunaga's Path",
         chapters: [
             {
-                id: "Chapter 1", // Chapter 1 of Nobunaga's Path
-                chapterName: "Chapter 1",
+                id: "chapter_1", // Chapter 1 of Nobunaga's Path
+                name: "Chapter 1",
                 stages: [
                     { ...nobunaga_chapter1_stage1 },
                     { ...nobunaga_chapter1_stage2 },
@@ -98,8 +98,8 @@ export const stagesData = [
                 ],
             },
             {
-                id: "Chapter 2", // Chapter 2 of Nobunaga's Path
-                chapterName: "Chapter 2",
+                id: "chapter_2", // Chapter 2 of Nobunaga's Path
+                name: "Chapter 2",
                 stages: [
                     { ...nobunaga_chapter2_stage1 },
                     { ...nobunaga_chapter2_stage2 },
@@ -109,8 +109,8 @@ export const stagesData = [
                 ],
             },
             {
-                id: "Chapter 3", // Chapter 3 of Nobunaga's Path
-                chapterName: "Chapter 3",
+                id: "chapter_3", // Chapter 3 of Nobunaga's Path
+                name: "Chapter 3",
                 stages: [
                     { ...nobunaga_chapter3_stage1 },
                     { ...nobunaga_chapter3_stage2 },
@@ -119,8 +119,8 @@ export const stagesData = [
                 ],
             },
             {
-                id: "Chapter 4", // Chapter 4 of Nobunaga's Path
-                chapterName: "Chapter 4",
+                id: "chapter_4", // Chapter 4 of Nobunaga's Path
+                name: "Chapter 4",
                 stages: [
                     { ...nobunaga_chapter4_stage1 },
                     { ...nobunaga_chapter4_stage2 },
@@ -133,8 +133,8 @@ export const stagesData = [
                 ],
             },
             {
-                id: "Chapter 5", // Chapter 5 of Nobunaga's Path
-                chapterName: "Chapter 5",
+                id: "chapter_5", // Chapter 5 of Nobunaga's Path
+                name: "Chapter 5",
                 stages: [
                     { ...nobunaga_chapter5_stage1 },
                     { ...nobunaga_chapter5_stage2 },
@@ -146,8 +146,8 @@ export const stagesData = [
                 ],
             },
             {
-                id: "Chapter 6", // Chapter 6 of Nobunaga's Path
-                chapterName: "Chapter 6",
+                id: "chapter_6", // Chapter 6 of Nobunaga's Path
+                name: "Chapter 6",
                 stages: [
                     { ...nobunaga_chapter6_stage1 },
                     { ...nobunaga_chapter6_stage2 },
@@ -159,12 +159,12 @@ export const stagesData = [
         ],
     },
     {
-        id: "Mitsuhide's Path", // Mitsuhide's Path
-        pathName: "Mitsuhide's Path",
+        id: "mitsuhides_path", // Mitsuhide's Path
+        name: "Mitsuhide's Path",
         chapters: [
             {
-                id: "Chapter 1", // Chapter 1 of Mitsuhide's Path
-                chapterName: "Chapter 1",
+                id: "chapter_1", // Chapter 1 of Mitsuhide's Path
+                name: "Chapter 1",
                 stages: [
                     { ...mitsuhide_chapter1_stage1 },
                     { ...mitsuhide_chapter1_stage2 },
@@ -173,8 +173,8 @@ export const stagesData = [
                 ],
             },
             {
-                id: "Chapter 2", // Chapter 2 of Mitsuhide's Path
-                chapterName: "Chapter 2",
+                id: "chapter_2", // Chapter 2 of Mitsuhide's Path
+                name: "Chapter 2",
             stages: [
                     { ...mitsuhide_chapter2_stage1 },
                     { ...mitsuhide_chapter2_stage2 },
@@ -182,8 +182,8 @@ export const stagesData = [
                 ],
             },
             {
-                id: "Chapter 3", // Chapter 3 of Mitsuhide's Path
-                chapterName: "Chapter 3",
+                id: "chapter_3", // Chapter 3 of Mitsuhide's Path
+                name: "Chapter 3",
                 stages: [
                     { ...mitsuhide_chapter3_stage1 },
                     { ...mitsuhide_chapter3_stage2 },
@@ -192,8 +192,8 @@ export const stagesData = [
                 ],
             },
             {
-                id: "Chapter 4", // Chapter 4 of Mitsuhide's Path
-                chapterName: "Chapter 4",
+                id: "chapter_4", // Chapter 4 of Mitsuhide's Path
+                name: "Chapter 4",
                 stages: [
                     { ...mitsuhide_chapter4_stage1 },
                     { ...mitsuhide_chapter4_stage2 },
@@ -203,8 +203,8 @@ export const stagesData = [
                 ],
             },
             {
-                id: "Chapter 5", // Chapter 5 of Mitsuhide's Path
-                chapterName: "Chapter 5",
+                id: "chapter_5", // Chapter 5 of Mitsuhide's Path
+                name: "Chapter 5",
                 stages: [
                     { ...mitsuhide_chapter5_stage1 },
                     { ...mitsuhide_chapter5_stage2 },
@@ -217,8 +217,8 @@ export const stagesData = [
                 ],
             },
             {
-                id: "Chapter 6", // Chapter 6 of Mitsuhide's Path
-                chapterName: "Chapter 6",
+                id: "chapter_6", // Chapter 6 of Mitsuhide's Path
+                name: "Chapter 6",
                 stages: [
                     { ...mitsuhide_chapter6_stage1 },
                     { ...mitsuhide_chapter6_stage2 },
@@ -228,12 +228,12 @@ export const stagesData = [
         ],
     },
     {
-        id: "Reverie Path", // Reverie Path
-        pathName: "Reverie Path",
+        id: "reverie_path", // Reverie Path
+        name: "Reverie Path",
         chapters: [
             {
                 id: "", // Chapter 1 of Reverie Chapter
-                chapterName: "",
+                name: "",
                 stages: [
                     { ...reverie_stage1 },
                     { ...reverie_stage2 },

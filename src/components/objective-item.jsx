@@ -1,17 +1,21 @@
 import { useState } from "react";
+import { cleanText } from "helpers/cleanText"
 
-export default function ObjectiveItem({ index, objective }) {
+export default function ObjectiveItem({ index, objective, handleList, stageRef, list }) {
     const { name, description } = objective;
-    const [isChecked, setisChecked] = useState(false);
-
-    const handleChecked = () => {
-        setisChecked(!isChecked);
-    };
+    const objectiveRef = `${stageRef}_${cleanText(name)}`
+    
+    const [ isChecked, setChecked ] = useState(list[objectiveRef] && true);
+    
+    const toggleClick = (value) => {
+        setChecked(!value);
+        handleList( objectiveRef, !value )
+    };       
 
     return (
         <div
             className={`objective-container ${isChecked && "objective-checked"}`}
-            onClick={handleChecked}
+            onClick={() => toggleClick(isChecked)}
         >
             <div className="objective-header">
                 <div className="objective-title">

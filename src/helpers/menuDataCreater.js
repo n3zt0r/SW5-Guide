@@ -2,15 +2,18 @@ import { cleanText } from "helpers/cleanText";
 
 export const menuDataCreater = (data) =>
     data.flatMap((path) => [
-        { id: cleanText(path.id), name: path.id },
+        {
+            id: path.id,
+            name: path.name,
+        },
         ...path.chapters.flatMap((chapter) => [
             {
-                id: `${cleanText(chapter.id)}_${cleanText(path.id)}`,
-                name: chapter.id,
+                id: `${path.id}_${chapter.id}`,
+                name: chapter.name,
             },
             ...chapter.stages.flatMap((stage) => [
                 {
-                    id: `${cleanText(stage.id)}_${cleanText(path.id)}`,
+                    id: `${path.id}_${chapter.id}_${cleanText(stage.id)}`,
                     name: stage.id,
                 },
             ]),
