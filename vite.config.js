@@ -11,6 +11,8 @@ export default defineConfig({
       components : "/src/components" ,
       data : "/src/data" ,
       helpers : "/src/helpers" ,
+      hooks : "/src/hooks" ,
+      contexts : "/src/contexts" ,
     },
   },
 })

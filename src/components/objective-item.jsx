@@ -1,26 +1,45 @@
 import { useState } from "react";
-import { cleanText } from "helpers/cleanText"
+import { normalizeText } from "helpers/normalizeText"
 
-export default function ObjectiveItem({ index, objective, handleList, stageRef, list }) {
+export default function ObjectiveItem({
+    index,
+    objective,
+    pathId,
+    chapterId,
+    stageId,
+    handleCountObjectives,
+    checkedObjectives,
+    setCheckedObjectives
+}) {
+    const newStageId = normalizeText(stageId);
+
     const { name, description } = objective;
-    const objectiveRef = `${stageRef}_${cleanText(name)}`
-    
-    const [ isChecked, setChecked ] = useState(list[objectiveRef] && true);
-    
-    const toggleClick = (value) => {
-        setChecked(!value);
-        handleList( objectiveRef, !value )
-    };       
+    const [isChecked, setChecked] = useState(
+        checkedObjectives?.[pathId]?.[chapterId]?.[newStageId]?.[index] || false,
+    );
+
+    const handleChecked = () => {
+        const newList = {...checkedObjectives}
+        
+        newList[pathId] ??= {}
+        newList[pathId][chapterId] ??= {}
+        newList[pathId][chapterId][newStageId] ??= []
+        newList[pathId][chapterId][newStageId][index] = !isChecked
+
+        handleCountObjectives(!isChecked);
+        setCheckedObjectives((prev) => ({ ...prev, ...newList }));
+        setChecked(!isChecked);
+    };
 
     return (
         <div
             className={`objective-container ${isChecked && "objective-checked"}`}
-            onClick={() => toggleClick(isChecked)}
+            onClick={handleChecked}
         >
             <div className="objective-header">
                 <div className="objective-title">
                     <p className="objective-name">
-                        {index + 1}. {name}
+                        {index}. {name}
                     </p>
 
                     {objective.type && (

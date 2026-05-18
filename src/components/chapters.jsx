@@ -1,21 +1,25 @@
 import React from "react";
 import Stage from "components/stage";
-import { cleanText } from "helpers/cleanText";
 
-export default function Chapters({ chapter, pathRef }) {
-    const { name, stages } = chapter;
-    const chapterRef = `${pathRef}_${cleanText(name)}`;
+export default function Chapters({ chapter, pathId }) {
+    const { id: chapterId , name, stages } = chapter;
+    const chapterRef = `${pathId}_${chapterId}`;
 
     return (
         <div className="chapters">
-        {name &&
-            <h3 className="chapters-title" id={`${chapterRef}`}>
-                {name}
-            </h3>
-        }
+            {name && (
+                <h3 className="chapters-title" id={`${chapterRef}`}>
+                    {name}
+                </h3>
+            )}
 
             {stages.map((stage, index) => (
-                <Stage key={index} stage={stage} chapterRef={chapterRef} />
+                <Stage
+                    key={index}
+                    stage={stage}
+                    pathId={pathId}
+                    chapterId={chapterId}
+                />
             ))}
         </div>
     );

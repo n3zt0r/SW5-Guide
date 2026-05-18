@@ -232,8 +232,8 @@ export const stagesData = [
         name: "Reverie Path",
         chapters: [
             {
-                id: "", // Chapter 1 of Reverie Chapter
-                name: "",
+                id: "chapter_1", // Chapter 1 of Reverie Chapter
+                name: "Chapter 1",
                 stages: [
                     { ...reverie_stage1 },
                     { ...reverie_stage2 },

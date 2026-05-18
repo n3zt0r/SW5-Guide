@@ -1,10 +1,10 @@
 import { useState } from "react";
-
+import { CheckedContext } from "contexts/CheckedContext";
 import ObjectiveList from "./objective-list";
 
 export default function RareWeapon({ rareWeapon }) {
     const { name, description, tips } = rareWeapon;
-    const [isChecked, setisChecked] = useState(false);
+    const [ isChecked, setisChecked ] = useState(false);
 
     const handleChecked = () => {
         setisChecked(!isChecked);

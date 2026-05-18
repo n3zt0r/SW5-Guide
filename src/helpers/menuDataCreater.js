@@ -1,4 +1,4 @@
-import { cleanText } from "helpers/cleanText";
+import { normalizeText } from "helpers/normalizeText";
 
 export const menuDataCreater = (data) =>
     data.flatMap((path) => [
@@ -13,7 +13,7 @@ export const menuDataCreater = (data) =>
             },
             ...chapter.stages.flatMap((stage) => [
                 {
-                    id: `${path.id}_${chapter.id}_${cleanText(stage.id)}`,
+                    id: `${path.id}_${chapter.id}_${normalizeText(stage.id)}`,
                     name: stage.id,
                 },
             ]),
