@@ -7,13 +7,16 @@ import { useLocalStorage } from "hooks/useLocalStorage";
 import { CheckedContext } from "contexts/CheckedContext";
 
 export default function App() {
-    const [ checkedObjectives, setCheckedObjectives ] = useLocalStorage( "SW5", {} );
+    const [checkedObjectives, setCheckedObjectives] = useLocalStorage(
+        "SW5",
+        {},
+    );
 
     return (
-        <div className="container">
-            <CheckedContext.Provider
-                value={{ checkedObjectives, setCheckedObjectives }}
-            >
+        <CheckedContext.Provider
+            value={ { checkedObjectives, setCheckedObjectives } }
+        >
+            <div className="container">
                 <Menu className="lateral-menu" stagesData={stagesData} />
 
                 <div className="main">
@@ -30,7 +33,7 @@ export default function App() {
                         <Path key={key} path={path} />
                     ))}
                 </div>
-            </CheckedContext.Provider>
-        </div>
+            </div>
+        </CheckedContext.Provider>
     );
 }

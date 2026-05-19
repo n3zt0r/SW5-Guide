@@ -1,22 +1,47 @@
 import { useState } from "react";
+import { setNestedValues } from "helpers/setNestedValue";
 import { CheckedContext } from "contexts/CheckedContext";
 import ObjectiveList from "./objective-list";
 
-export default function RareWeapon({ rareWeapon }) {
+export default function RareWeapon({
+    index,
+    rareWeapon,
+    pathId,
+    chapterId,
+    newStageId,
+    checkedObjectives,
+    setCheckedObjectives,
+    handleCountRareWeapons,
+}) {
     const { name, description, tips } = rareWeapon;
-    const [ isChecked, setisChecked ] = useState(false);
+    const [isChecked, setChecked] = useState(
+        checkedObjectives?.[pathId]?.[chapterId]?.[newStageId]?.[
+            "rareWeapons"
+        ]?.[index] || false,
+    );
 
     const handleChecked = () => {
-        setisChecked(!isChecked);
+        const newList = setNestedValues(
+            checkedObjectives,
+            pathId,
+            chapterId,
+            newStageId,
+            "rareWeapons",
+            index,
+            !isChecked,
+        );
+
+        setCheckedObjectives((prev) => ({ ...prev, ...newList }));
+        handleCountRareWeapons(!isChecked);
+        setChecked(!isChecked);
     };
 
     return (
         <div className={`objectives-list`}>
-            <div className={`objective-container ${isChecked && "objective-checked"}`}>
-                <div
-                    className={`objective-header`}
-                    onClick={handleChecked}
-                >
+            <div
+                className={`objective-container ${isChecked && "objective-checked"}`}
+            >
+                <div className={`objective-header`} onClick={handleChecked}>
                     <p className="objective-name objective-title">
                         Rare Weapon: {name}
                     </p>

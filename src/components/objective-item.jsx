@@ -1,33 +1,37 @@
 import { useState } from "react";
-import { normalizeText } from "helpers/normalizeText"
+import { setNestedValues } from "helpers/setNestedValue";
+import { CheckedContext } from "contexts/CheckedContext";
 
 export default function ObjectiveItem({
     index,
     objective,
     pathId,
     chapterId,
-    stageId,
+    newStageId,
     handleCountObjectives,
     checkedObjectives,
-    setCheckedObjectives
+    setCheckedObjectives,
 }) {
-    const newStageId = normalizeText(stageId);
-
     const { name, description } = objective;
     const [isChecked, setChecked] = useState(
-        checkedObjectives?.[pathId]?.[chapterId]?.[newStageId]?.[index] || false,
+        checkedObjectives?.[pathId]?.[chapterId]?.[newStageId]?.[
+            "objectives"
+        ]?.[index] || false,
     );
 
     const handleChecked = () => {
-        const newList = {...checkedObjectives}
-        
-        newList[pathId] ??= {}
-        newList[pathId][chapterId] ??= {}
-        newList[pathId][chapterId][newStageId] ??= []
-        newList[pathId][chapterId][newStageId][index] = !isChecked
+        const newList = setNestedValues(
+            checkedObjectives,
+            pathId,
+            chapterId,
+            newStageId,
+            "objectives",
+            index,
+            !isChecked,
+        );
 
-        handleCountObjectives(!isChecked);
         setCheckedObjectives((prev) => ({ ...prev, ...newList }));
+        handleCountObjectives(!isChecked);
         setChecked(!isChecked);
     };
 
@@ -39,10 +43,10 @@ export default function ObjectiveItem({
             <div className="objective-header">
                 <div className="objective-title">
                     <p className="objective-name">
-                        {index}. {name}
+                        {index + 1}. {name}
                     </p>
 
-                    {objective.type && (
+                    {objective.type && ( // Bonus OR Special type indicator if type is provided
                         <span
                             className={`objective-type objective-${objective.type}`}
                         ></span>
@@ -50,13 +54,12 @@ export default function ObjectiveItem({
                 </div>
 
                 <p className="objective-description">{description}</p>
-                {objective.tips && (
+                {objective.tips && ( // Tips section if tips are provided
                     <p className="objective-tips">{objective.tips}</p>
                 )}
             </div>
 
-            {/* Only section for specific characters */}
-            {objective.only && (
+            {objective.only && ( // Only section for specific characters
                 <div className={`objective-only`}>
                     <img
                         src={`../src/assets/characters/${objective.only}.webp`}
