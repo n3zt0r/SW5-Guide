@@ -1,37 +1,17 @@
 import { useState } from "react";
-import { setNestedValues } from "helpers/setNestedValue";
 import { CheckedContext } from "contexts/CheckedContext";
 
 export default function ObjectiveItem({
     index,
     objective,
-    pathId,
-    chapterId,
-    newStageId,
-    handleCountObjectives,
-    checkedObjectives,
-    setCheckedObjectives,
+    checkedList,
+    handleCount
 }) {
     const { name, description } = objective;
-    const [isChecked, setChecked] = useState(
-        checkedObjectives?.[pathId]?.[chapterId]?.[newStageId]?.[
-            "objectives"
-        ]?.[index] || false,
-    );
+    const [isChecked, setChecked] = useState(checkedList?.["objectives"]?.[index] || false);
 
     const handleChecked = () => {
-        const newList = setNestedValues(
-            checkedObjectives,
-            pathId,
-            chapterId,
-            newStageId,
-            "objectives",
-            index,
-            !isChecked,
-        );
-
-        setCheckedObjectives((prev) => ({ ...prev, ...newList }));
-        handleCountObjectives(!isChecked);
+        handleCount(!isChecked, "objectives", index);
         setChecked(!isChecked);
     };
 

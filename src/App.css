@@ -54,16 +54,25 @@ body {
 .menu-list {
   width: 250px;
   margin: 0;
-  padding: 20px 30px 20px 20px;
+  padding: 10px 30px 10px 20px;
   list-style: none;
   display: flex;
   flex-direction: column;
 }
 
-.menu-link {
+.menu-link:hover {
   color: var(--white);
+  background: rgba(217, 48, 11, 50%);
+  transform: scale(1.10);
+}
+
+.menu-link {
+  position: relative;
+  font-size: 0.80rem;
+  color: var(--gray);
   text-decoration: none;
-  margin-block: 5px;
+  padding: 0;
+  margin: 0;
 }
 
 .menu-link-active {
@@ -202,6 +211,11 @@ body {
   cursor: pointer;
   display: flex;
 }
+
+.objective-container:hover {
+  background: #00000050;
+}
+
 
 .objective-header {
   width: 100%;

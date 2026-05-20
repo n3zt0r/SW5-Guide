@@ -4,33 +4,43 @@ import RareWeapon from "./rare-weapon";
 import { CheckedContext } from "contexts/CheckedContext";
 import { countTrueByPath } from "helpers/countTrueByPath";
 import { normalizeText } from "helpers/normalizeText";
+import { setNestedValues } from "helpers/setNestedValue";
 
 export default function ObjectiveList({ stage, pathId, chapterId, stageId }) {
-    const newStageId = normalizeText(stageId);
-    const { checkedObjectives, setCheckedObjectives } = useContext(CheckedContext)
-    const [ countObjectives, setCountObjectives ] = useState(countTrueByPath(checkedObjectives, pathId, chapterId, newStageId, "objectives"));
-    const [ countRareWeapons, setRareWeapons ] = useState(countTrueByPath(checkedObjectives, pathId, chapterId, newStageId, "rareWeapons"));
-  
+    const { checkedObjectives, setCheckedObjectives } =
+        useContext(CheckedContext);
     const { objectives, rareWeapon } = stage;
-    const objectivesNumber = objectives.length;
 
-    const handleCountObjectives = (value) => {
-        value ? setCountObjectives(countObjectives + 1) : setCountObjectives(countObjectives - 1);
+    const newStageId = normalizeText(stageId);
+    const checkedList = checkedObjectives?.[pathId]?.[chapterId]?.[
+        newStageId
+    ] || {
+        objectives: [],
+        rareWeapons: [],
     };
 
-    const handleCountRareWeapons = (value) => {
-        value ? setRareWeapons(countRareWeapons + 1) : setRareWeapons(countRareWeapons - 1);
+    const [count, setCount] = useState({
+        objectives: countTrueByPath(checkedList, "objectives"),
+        rareWeapons: countTrueByPath(checkedList, "rareWeapons"),
+    });
+
+    const handleCount = (value, arg, index) => {
+        value
+            ? setCount((prev) => ({ ...prev, [arg]: prev[arg] + 1 }))
+            : setCount((prev) => ({ ...prev, [arg]: prev[arg] - 1 }));
+        
+        const newList = setNestedValues(checkedObjectives, pathId, chapterId, newStageId, arg, index, value);
+        setCheckedObjectives((prev) => ({ ...prev, ...newList }));
     };
 
     return (
         <div className="objectives-container">
-            <CheckedContext.Provider value={{ countObjectives, setCountObjectives }}>
                 <h6 className="objectives-number">
-                    Objectives: {countObjectives} / {objectivesNumber}
+                    Objectives: {count.objectives} / {objectives.length}
                 </h6>
                 {rareWeapon && (
                     <h6 className="objectives-number">
-                        RareWeapons: {countRareWeapons} / {rareWeapon.length}
+                        RareWeapons: {count.rareWeapons} / {rareWeapon.length}
                     </h6>
                 )}
 
@@ -40,13 +50,8 @@ export default function ObjectiveList({ stage, pathId, chapterId, stageId }) {
                             key={index}
                             index={index}
                             objective={objective}
-                            pathId={pathId}
-                            chapterId={chapterId}
-                            stageId={stageId}
-                            newStageId={newStageId}
-                            handleCountObjectives={handleCountObjectives}
-                            checkedObjectives={checkedObjectives}
-                            setCheckedObjectives={setCheckedObjectives}
+                            checkedList={checkedList}
+                            handleCount={handleCount}
                         />
                     ))}
                 </ul>
@@ -56,17 +61,11 @@ export default function ObjectiveList({ stage, pathId, chapterId, stageId }) {
                         <RareWeapon
                             key={index}
                             index={index}
-                            rareWeapon={weapon}
-                            pathId={pathId}
-                            chapterId={chapterId}
-                            stageId={stageId}
-                            newStageId={newStageId}
-                            handleCountRareWeapons={handleCountRareWeapons}
-                            checkedObjectives={checkedObjectives}
-                            setCheckedObjectives={setCheckedObjectives}
+                            weapon={weapon}
+                            checkedList={checkedList}
+                            handleCount={handleCount}
                         />
                     ))}
-            </CheckedContext.Provider>
         </div>
     );
 }

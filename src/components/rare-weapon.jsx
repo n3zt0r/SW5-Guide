@@ -1,38 +1,17 @@
 import { useState } from "react";
-import { setNestedValues } from "helpers/setNestedValue";
 import { CheckedContext } from "contexts/CheckedContext";
-import ObjectiveList from "./objective-list";
 
 export default function RareWeapon({
     index,
-    rareWeapon,
-    pathId,
-    chapterId,
-    newStageId,
-    checkedObjectives,
-    setCheckedObjectives,
-    handleCountRareWeapons,
+    weapon,
+    checkedList,
+    handleCount
 }) {
-    const { name, description, tips } = rareWeapon;
-    const [isChecked, setChecked] = useState(
-        checkedObjectives?.[pathId]?.[chapterId]?.[newStageId]?.[
-            "rareWeapons"
-        ]?.[index] || false,
-    );
+    const { name, description, tips } = weapon;
+    const [isChecked, setChecked] = useState(checkedList?.["rareWeapons"]?.[index] || false);
 
     const handleChecked = () => {
-        const newList = setNestedValues(
-            checkedObjectives,
-            pathId,
-            chapterId,
-            newStageId,
-            "rareWeapons",
-            index,
-            !isChecked,
-        );
-
-        setCheckedObjectives((prev) => ({ ...prev, ...newList }));
-        handleCountRareWeapons(!isChecked);
+        handleCount(!isChecked, "rareWeapons", index);
         setChecked(!isChecked);
     };
 
